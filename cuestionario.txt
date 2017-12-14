@@ -1,0 +1,6 @@
+1. es cuando se guardan los cambios que se han hecho localmente
+
+2. cuando se unen las ramas en un mismo camino
+
+3. push es un comando que sube los cambios hechos cuando trabajamos al equipo remoto
+	pull baja los cambios de la rama determinada y la actualiza contra el repositorio local
