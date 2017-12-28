@@ -1,0 +1,115 @@
+create table Usuario(
+nickname varchar(30) primary key,
+nombre varchar(35) not null,
+corre varchar(35) not null,
+fecha_nac varchar(35) not null,
+contrasena varchar(35) not null
+)
+
+create table Proyecto(
+cod_pro int(8) primary key,
+nombre varchar(35) not null,
+fecha_i date not null,
+fecha_f date not null,
+pago int(8) not null,
+nickname varchar(30) not null,
+Constraint Foreign Key (nickname) References Usuario(nickname)
+)
+
+create table tarea_individual(
+cod_tarea int primary key,
+nombre varchar(35) not null,
+descripcion varchar(35) not null,
+fecha_i date not null,
+requisitos varchar(200) not null,
+pago int not null,
+nickname varchar(35) not null,
+foreign key (nickname) references usuario(nickname)
+)
+
+create table asociacion(
+cod_aso int primary key,
+nombre varchar(35) not null,
+resumen varchar(35) not null,
+logo varchar(10) not null
+)
+
+create table invitacion(
+cod_inv int primary key,
+cod_aso int not null,
+nickname varchar(30) not null,
+foreign key (cod_aso) references asociacion(cod_aso),
+foreign key (nickname) references usuario(nickname)
+)
+
+create table habilidad(
+cod_hab int primary key,
+nombre varchar(30) not null,
+resumen varchar(50) not null,
+nickname varchar(30) not null,
+karma int not null,
+foreign key (nickname) references usuario(nickname)
+)
+
+create table conocimiento(
+cod_cono int primary key,
+nombre varchar(30) not null,
+descripcion varchar(50) not null,
+cod_hab int not null,
+foreign key (cod_hab) references habilidad(cod_hab)
+)
+
+ESTA ES EL DETALLE DEL PROYECTO
+create table detalle(
+cod_det_p int primary key,
+involucrados varchar(30) not null,
+cod_pro int not null,
+foreign key (cod_pro) references proyecto(cod_pro)
+)
+
+ESTA ES LA DE LA TAREA
+create table detalle_ta(
+cod_tarea int primary key,
+nombre varchar(30) not null,
+descripcion varchar(50) not null,
+fecha_i date not null,
+requisitos varchar(50) not null,
+pago int not null,
+cod_pro int not null,
+foreign key (cod_pro) references proyecto(cod_pro)
+)
+
+
+ESTA ES LA DEL DETALLE DE TAREA
+create table tareadetalle(
+cod_tadet int primary key,
+lista varchar(30) not null,
+cod_tarea int not null,
+foreign key (cod_tarea) references detalle_ta(cod_tarea)
+)
+
+create table estado(
+no_estado int primary key,
+descripcion varchar(50) not null,
+nickname varchar(35) not null,
+foreign key (nickname) references usuario(nickname)
+)
+
+create table comentario(
+no_comentario int primary key,
+descripcion varchar(50) not null,
+no_estado int not null,
+foreign key (no_estado) references estado(no_estado)
+)
+
+create table mensaje(
+cod_mensaje int primary key,
+contenido varchar(50) not null,
+recibe_u varchar(30) not null,
+nickname varchar(30) not null,
+foreign key (nickname) references usuario(nickname)
+)
+
+
+
+
