@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Webservice/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="Webservice2" targetNamespace="http://Webservice/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/Fase2/Webservice2?xsd=1" namespace="http://Webservice/" />
+    </xsd:schema>
+  </types>
+  <message name="CrearTareaProyecto">
+    <part name="parameters" element="tns:CrearTareaProyecto" />
+  </message>
+  <message name="CrearTareaProyectoResponse">
+    <part name="parameters" element="tns:CrearTareaProyectoResponse" />
+  </message>
+  <message name="CrearTareaIndividual">
+    <part name="parameters" element="tns:CrearTareaIndividual" />
+  </message>
+  <message name="CrearTareaIndividualResponse">
+    <part name="parameters" element="tns:CrearTareaIndividualResponse" />
+  </message>
+  <message name="IngresarComentario">
+    <part name="parameters" element="tns:IngresarComentario" />
+  </message>
+  <message name="IngresarComentarioResponse">
+    <part name="parameters" element="tns:IngresarComentarioResponse" />
+  </message>
+  <message name="IngresarHabilidad">
+    <part name="parameters" element="tns:IngresarHabilidad" />
+  </message>
+  <message name="IngresarHabilidadResponse">
+    <part name="parameters" element="tns:IngresarHabilidadResponse" />
+  </message>
+  <message name="IngresarConocimiento">
+    <part name="parameters" element="tns:IngresarConocimiento" />
+  </message>
+  <message name="IngresarConocimientoResponse">
+    <part name="parameters" element="tns:IngresarConocimientoResponse" />
+  </message>
+  <message name="CrearAsociacion">
+    <part name="parameters" element="tns:CrearAsociacion" />
+  </message>
+  <message name="CrearAsociacionResponse">
+    <part name="parameters" element="tns:CrearAsociacionResponse" />
+  </message>
+  <message name="IngresarEstado">
+    <part name="parameters" element="tns:IngresarEstado" />
+  </message>
+  <message name="IngresarEstadoResponse">
+    <part name="parameters" element="tns:IngresarEstadoResponse" />
+  </message>
+  <message name="CrearProyecto">
+    <part name="parameters" element="tns:CrearProyecto" />
+  </message>
+  <message name="CrearProyectoResponse">
+    <part name="parameters" element="tns:CrearProyectoResponse" />
+  </message>
+  <message name="EnviarMensaje">
+    <part name="parameters" element="tns:EnviarMensaje" />
+  </message>
+  <message name="EnviarMensajeResponse">
+    <part name="parameters" element="tns:EnviarMensajeResponse" />
+  </message>
+  <message name="EnviarInvitacion">
+    <part name="parameters" element="tns:EnviarInvitacion" />
+  </message>
+  <message name="EnviarInvitacionResponse">
+    <part name="parameters" element="tns:EnviarInvitacionResponse" />
+  </message>
+  <message name="CrearUsuario">
+    <part name="parameters" element="tns:CrearUsuario" />
+  </message>
+  <message name="CrearUsuarioResponse">
+    <part name="parameters" element="tns:CrearUsuarioResponse" />
+  </message>
+  <message name="hello">
+    <part name="parameters" element="tns:hello" />
+  </message>
+  <message name="helloResponse">
+    <part name="parameters" element="tns:helloResponse" />
+  </message>
+  <message name="Login">
+    <part name="parameters" element="tns:Login" />
+  </message>
+  <message name="LoginResponse">
+    <part name="parameters" element="tns:LoginResponse" />
+  </message>
+  <portType name="Webservice2">
+    <operation name="CrearTareaProyecto">
+      <input wsam:Action="http://Webservice/Webservice2/CrearTareaProyectoRequest" message="tns:CrearTareaProyecto" />
+      <output wsam:Action="http://Webservice/Webservice2/CrearTareaProyectoResponse" message="tns:CrearTareaProyectoResponse" />
+    </operation>
+    <operation name="CrearTareaIndividual">
+      <input wsam:Action="http://Webservice/Webservice2/CrearTareaIndividualRequest" message="tns:CrearTareaIndividual" />
+      <output wsam:Action="http://Webservice/Webservice2/CrearTareaIndividualResponse" message="tns:CrearTareaIndividualResponse" />
+    </operation>
+    <operation name="IngresarComentario">
+      <input wsam:Action="http://Webservice/Webservice2/IngresarComentarioRequest" message="tns:IngresarComentario" />
+      <output wsam:Action="http://Webservice/Webservice2/IngresarComentarioResponse" message="tns:IngresarComentarioResponse" />
+    </operation>
+    <operation name="IngresarHabilidad">
+      <input wsam:Action="http://Webservice/Webservice2/IngresarHabilidadRequest" message="tns:IngresarHabilidad" />
+      <output wsam:Action="http://Webservice/Webservice2/IngresarHabilidadResponse" message="tns:IngresarHabilidadResponse" />
+    </operation>
+    <operation name="IngresarConocimiento">
+      <input wsam:Action="http://Webservice/Webservice2/IngresarConocimientoRequest" message="tns:IngresarConocimiento" />
+      <output wsam:Action="http://Webservice/Webservice2/IngresarConocimientoResponse" message="tns:IngresarConocimientoResponse" />
+    </operation>
+    <operation name="CrearAsociacion">
+      <input wsam:Action="http://Webservice/Webservice2/CrearAsociacionRequest" message="tns:CrearAsociacion" />
+      <output wsam:Action="http://Webservice/Webservice2/CrearAsociacionResponse" message="tns:CrearAsociacionResponse" />
+    </operation>
+    <operation name="IngresarEstado">
+      <input wsam:Action="http://Webservice/Webservice2/IngresarEstadoRequest" message="tns:IngresarEstado" />
+      <output wsam:Action="http://Webservice/Webservice2/IngresarEstadoResponse" message="tns:IngresarEstadoResponse" />
+    </operation>
+    <operation name="CrearProyecto">
+      <input wsam:Action="http://Webservice/Webservice2/CrearProyectoRequest" message="tns:CrearProyecto" />
+      <output wsam:Action="http://Webservice/Webservice2/CrearProyectoResponse" message="tns:CrearProyectoResponse" />
+    </operation>
+    <operation name="EnviarMensaje">
+      <input wsam:Action="http://Webservice/Webservice2/EnviarMensajeRequest" message="tns:EnviarMensaje" />
+      <output wsam:Action="http://Webservice/Webservice2/EnviarMensajeResponse" message="tns:EnviarMensajeResponse" />
+    </operation>
+    <operation name="EnviarInvitacion">
+      <input wsam:Action="http://Webservice/Webservice2/EnviarInvitacionRequest" message="tns:EnviarInvitacion" />
+      <output wsam:Action="http://Webservice/Webservice2/EnviarInvitacionResponse" message="tns:EnviarInvitacionResponse" />
+    </operation>
+    <operation name="CrearUsuario">
+      <input wsam:Action="http://Webservice/Webservice2/CrearUsuarioRequest" message="tns:CrearUsuario" />
+      <output wsam:Action="http://Webservice/Webservice2/CrearUsuarioResponse" message="tns:CrearUsuarioResponse" />
+    </operation>
+    <operation name="hello">
+      <input wsam:Action="http://Webservice/Webservice2/helloRequest" message="tns:hello" />
+      <output wsam:Action="http://Webservice/Webservice2/helloResponse" message="tns:helloResponse" />
+    </operation>
+    <operation name="Login">
+      <input wsam:Action="http://Webservice/Webservice2/LoginRequest" message="tns:Login" />
+      <output wsam:Action="http://Webservice/Webservice2/LoginResponse" message="tns:LoginResponse" />
+    </operation>
+  </portType>
+  <binding name="Webservice2PortBinding" type="tns:Webservice2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="CrearTareaProyecto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearTareaIndividual">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IngresarComentario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IngresarHabilidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IngresarConocimiento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearAsociacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IngresarEstado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearProyecto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EnviarMensaje">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EnviarInvitacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="hello">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Login">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Webservice2">
+    <port name="Webservice2Port" binding="tns:Webservice2PortBinding">
+      <soap:address location="http://localhost:8080/Fase2/Webservice2" />
+    </port>
+  </service>
+</definitions>

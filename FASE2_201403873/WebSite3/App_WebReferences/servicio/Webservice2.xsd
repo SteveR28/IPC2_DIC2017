@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Webservice/" targetNamespace="http://Webservice/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CrearAsociacion" type="tns:CrearAsociacion" />
+  <xs:element name="CrearAsociacionResponse" type="tns:CrearAsociacionResponse" />
+  <xs:element name="CrearProyecto" type="tns:CrearProyecto" />
+  <xs:element name="CrearProyectoResponse" type="tns:CrearProyectoResponse" />
+  <xs:element name="CrearTareaIndividual" type="tns:CrearTareaIndividual" />
+  <xs:element name="CrearTareaIndividualResponse" type="tns:CrearTareaIndividualResponse" />
+  <xs:element name="CrearTareaProyecto" type="tns:CrearTareaProyecto" />
+  <xs:element name="CrearTareaProyectoResponse" type="tns:CrearTareaProyectoResponse" />
+  <xs:element name="CrearUsuario" type="tns:CrearUsuario" />
+  <xs:element name="CrearUsuarioResponse" type="tns:CrearUsuarioResponse" />
+  <xs:element name="EnviarInvitacion" type="tns:EnviarInvitacion" />
+  <xs:element name="EnviarInvitacionResponse" type="tns:EnviarInvitacionResponse" />
+  <xs:element name="EnviarMensaje" type="tns:EnviarMensaje" />
+  <xs:element name="EnviarMensajeResponse" type="tns:EnviarMensajeResponse" />
+  <xs:element name="IngresarComentario" type="tns:IngresarComentario" />
+  <xs:element name="IngresarComentarioResponse" type="tns:IngresarComentarioResponse" />
+  <xs:element name="IngresarConocimiento" type="tns:IngresarConocimiento" />
+  <xs:element name="IngresarConocimientoResponse" type="tns:IngresarConocimientoResponse" />
+  <xs:element name="IngresarEstado" type="tns:IngresarEstado" />
+  <xs:element name="IngresarEstadoResponse" type="tns:IngresarEstadoResponse" />
+  <xs:element name="IngresarHabilidad" type="tns:IngresarHabilidad" />
+  <xs:element name="IngresarHabilidadResponse" type="tns:IngresarHabilidadResponse" />
+  <xs:element name="Login" type="tns:Login" />
+  <xs:element name="LoginResponse" type="tns:LoginResponse" />
+  <xs:element name="hello" type="tns:hello" />
+  <xs:element name="helloResponse" type="tns:helloResponse" />
+  <xs:complexType name="EnviarInvitacion">
+    <xs:sequence>
+      <xs:element name="cod_inv" type="xs:int" />
+      <xs:element name="cod_aso" type="xs:int" />
+      <xs:element minOccurs="0" name="nickname" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EnviarInvitacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nickname" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:string" />
+      <xs:element minOccurs="0" name="contra" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IngresarHabilidad">
+    <xs:sequence>
+      <xs:element name="cod_hab" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="resumen" type="xs:string" />
+      <xs:element minOccurs="0" name="nickname" type="xs:string" />
+      <xs:element minOccurs="0" name="karma" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IngresarHabilidadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EnviarMensaje">
+    <xs:sequence>
+      <xs:element name="cod_mensaje" type="xs:int" />
+      <xs:element minOccurs="0" name="contenido" type="xs:string" />
+      <xs:element minOccurs="0" name="recibe_u" type="xs:string" />
+      <xs:element minOccurs="0" name="nikcname" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EnviarMensajeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="hello">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="helloResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearTareaIndividual">
+    <xs:sequence>
+      <xs:element name="cod_tarea" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_i" type="xs:string" />
+      <xs:element minOccurs="0" name="requisitos" type="xs:string" />
+      <xs:element name="pago" type="xs:int" />
+      <xs:element minOccurs="0" name="nickname" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearTareaIndividualResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearProyecto">
+    <xs:sequence>
+      <xs:element name="cod_pro" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_i" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_f" type="xs:string" />
+      <xs:element name="pago" type="xs:int" />
+      <xs:element minOccurs="0" name="nickname" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearProyectoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearTareaProyecto">
+    <xs:sequence>
+      <xs:element name="cod_tarea" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_i" type="xs:string" />
+      <xs:element minOccurs="0" name="requisitos" type="xs:string" />
+      <xs:element name="pago" type="xs:int" />
+      <xs:element minOccurs="0" name="cod_pro" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearTareaProyectoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearAsociacion">
+    <xs:sequence>
+      <xs:element name="cod_aso" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="resumen" type="xs:string" />
+      <xs:element minOccurs="0" name="logo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearAsociacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IngresarEstado">
+    <xs:sequence>
+      <xs:element name="no_estado" type="xs:int" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="nickname" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IngresarEstadoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IngresarComentario">
+    <xs:sequence>
+      <xs:element name="no_comentario" type="xs:int" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="no_estado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IngresarComentarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IngresarConocimiento">
+    <xs:sequence>
+      <xs:element name="cod_cono" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="cod_hab" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IngresarConocimientoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Login">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="Contrasena" type="xs:string" />
+      <xs:element minOccurs="0" name="cui" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LoginResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
